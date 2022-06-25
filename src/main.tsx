@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client';
 import Routing from './routing/Routing';
 
 // Styles
+import './index.css';
 import 'antd/dist/antd.css';
 
 const app = (
