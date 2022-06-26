@@ -9,26 +9,17 @@
 
       <!-- !4!78FAE! -->
 
-    .str1 {stroke:#141414;stroke-width:52.92;stroke-miterlimit:22.9256}
-    .str0 {stroke:#141414;stroke-width:20;stroke-miterlimit:22.9256}
+    .str1 {stroke:#fff;stroke-width:52.92;stroke-miterlimit:22.9256}
+    .str0 {stroke:#fff;stroke-width:20;stroke-miterlimit:22.9256}
     .fil1 {fill:none}
-    .fil0 {fill:#141414}
-    .fil2 {fill:#141414;fill-rule:nonzero}
+    .fil0 {fill:#fff}
+    .fil2 {fill:#fff;fill-rule:nonzero}
 
     </style>
 
   </defs>
   <g >
     <g>
-      <circle class="fil0 str0" cx="6092.23" cy="906.19" r="726.12"></circle>
-      <circle class="fil0 str0" cx="7795.61" cy="2611.83" r="726.12"></circle>
-      <circle class="fil0 str0" cx="4388.91" cy="2611.83" r="726.12"></circle>
-      <circle class="fil1 str1" cx="2694.18" cy="4291.51" r="726.12"></circle>
-      <circle class="fil0 str0" cx="982.19" cy="6002.55" r="726.12"></circle>
-      <circle class="fil0 str0" cx="2693.56" cy="7697.92" r="726.12"></circle>
-      <circle class="fil1 str1" cx="4404.9" cy="9393.27" r="726.12"></circle>
-      <circle class="fil1 str1" cx="7779.63" cy="9393.27" r="726.12"></circle>
-      <circle class="fil0 str0" cx="6092.23" cy="11108.07" r="726.12"></circle>
       <polygon class="fil2" points="20040.58,6973.99 20040.58,5618.29 19367.22,5618.29 19367.22,5199.86 21242.87,5199.86 21242.87,5618.29 20536.85,5618.29 20536.85,6973.99 "></polygon>
       <path class="fil2" d="M16966.06 6973.99l0 -1774.13 1010.1 0c254.9,0 816.07,-0.7 815.32,643.68 -0.62,533.94 -409.16,697.89 -590.93,697.89l-746.34 0 0 432.56 -488.15 0zm488.15 -1424.18l0 581.42 359.39 0.55c168.99,0.25 293.51,-22.94 374.12,-67.93 80.38,-44.87 121.26,-115.01 121.26,-209.64 0,-100.54 -47.14,-181.9 -140.61,-243.63 -93.92,-62.04 -217.67,-59.97 -369.6,-60.22l-344.56 -0.55z"></path>
       <polygon class="fil2" points="15221.04,6973.99 15221.04,6307.24 14416.64,5199.86 14979.71,5199.86 15457.53,5888.2 15898.43,5199.86 16431.55,5199.86 15717.49,6307.24 15717.05,6973.99 "></polygon>
