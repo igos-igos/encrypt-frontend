@@ -1,0 +1,7 @@
+.button {
+  padding-top: 7px;
+}
+
+.danger:hover {
+  color: #fff !important;
+}
