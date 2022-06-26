@@ -1,5 +1,8 @@
-import { Button, Form, Modal } from 'antd';
+// Core
 import { FC } from 'react';
+import { Button, Form, Modal } from 'antd';
+
+// Components
 import ModalForm from './modalForm/ModalForm';
 
 type PropsType = {
@@ -11,18 +14,20 @@ type PropsType = {
 
 const ModalWithForm: FC<PropsType> = ({ title, visible, cancelHandler, isEdit = false }) => {
   const [form] = Form.useForm();
-  const a = () => {
+
+  const onCancelHandler = () => {
     if (!isEdit) {
       form.resetFields();
     }
     cancelHandler();
   };
+
   return (
     <Modal
       title={title}
       visible={visible}
       onOk={() => {}}
-      onCancel={a}
+      onCancel={onCancelHandler}
       footer={[
         <Button key="1" form="modal-form" type="primary" htmlType="submit">
           Сохранить
