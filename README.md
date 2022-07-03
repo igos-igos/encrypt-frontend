@@ -19,6 +19,16 @@ yarn
 yarn dev
 ```
 
+## Production
+
+### Build production
+```bash
+yarn build
+```
+### Locally preview production build
+```bash
+yarn preview
+```
 ## Code style
 The project uses eslint, stylelint, prettier
 
