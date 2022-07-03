@@ -10,17 +10,25 @@ import showDeleteConfirm from '../../../../common-components/confirmDelete';
 import styles from './styles.module.css';
 
 type PropsType = {
+  id: string;
   showEditHandler: () => void;
+  deleteCardHandler: (id: string) => void;
+  findAccount: (id: string) => void;
 };
 
-const NestedMenu: FC<PropsType> = ({ showEditHandler }) => {
+const NestedMenu: FC<PropsType> = ({ id, showEditHandler, deleteCardHandler, findAccount }) => {
+  const editButtonHandler = () => {
+    findAccount(id);
+    showEditHandler();
+  };
+
   return (
     <Menu
       items={[
         {
           key: '1',
           label: (
-            <Button type="link" onClick={showEditHandler}>
+            <Button type="link" onClick={editButtonHandler}>
               Редактировать
             </Button>
           ),
@@ -33,7 +41,7 @@ const NestedMenu: FC<PropsType> = ({ showEditHandler }) => {
               type="link"
               className={styles.danger}
               danger
-              onClick={() => showDeleteConfirm({ okHandler: () => {}, title: 'Удалить запись?' })}
+              onClick={() => showDeleteConfirm({ okHandler: () => deleteCardHandler(id), title: 'Удалить запись?' })}
             >
               Удалить
             </Button>
@@ -44,9 +52,18 @@ const NestedMenu: FC<PropsType> = ({ showEditHandler }) => {
   );
 };
 
-const ExtraMenu: FC<PropsType> = ({ showEditHandler }) => {
+const ExtraMenu: FC<PropsType> = ({ id, showEditHandler, deleteCardHandler, findAccount }) => {
   return (
-    <Dropdown overlay={<NestedMenu showEditHandler={showEditHandler} />}>
+    <Dropdown
+      overlay={
+        <NestedMenu
+          id={id}
+          deleteCardHandler={deleteCardHandler}
+          showEditHandler={showEditHandler}
+          findAccount={findAccount}
+        />
+      }
+    >
       <Button type="link">
         <DownOutlined className={styles.button} />
       </Button>

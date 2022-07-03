@@ -9,21 +9,31 @@ import ExtraMenu from './extraMenu/ExtraMenu';
 import styles from './styles.module.css';
 
 type PropsType = {
+  id: string;
   title: string;
   login: string;
   password: string;
-  url: string;
+  url?: string;
   showEditModal: () => void;
+  deleteCard: (id: string) => void;
+  findAccount: (id: string) => void;
 };
 
-const ItemCard: FC<PropsType> = ({ title, login, password, url, showEditModal }) => {
+const ItemCard: FC<PropsType> = ({ id, title, login, password, url, showEditModal, deleteCard, findAccount }) => {
   return (
-    <Card className={styles.container} type="inner" title={title} extra={<ExtraMenu showEditHandler={showEditModal} />}>
+    <Card
+      className={styles.container}
+      type="inner"
+      title={title}
+      extra={
+        <ExtraMenu id={id} deleteCardHandler={deleteCard} showEditHandler={showEditModal} findAccount={findAccount} />
+      }
+    >
       login: {login}
       <br />
       password: {password}
       <br />
-      url: {url}
+      {url && `url: ${url}`}
     </Card>
   );
 };
