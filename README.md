@@ -6,6 +6,7 @@
 - React 18.0.0
 - Mobx 6.6.1
 - Antd 4.21.3
+- Docker
 
 ## Development
 
@@ -68,3 +69,10 @@ chore: run tests on travis ci
 fix(server): send cors headers (#43)
 feat(blog): add comment section
 ```
+
+## Docker
+The container is started in production mode with the command:
+```bash
+docker-compose up -d --build
+```
+Container name – `encrypt-frontend`, port – `80`
