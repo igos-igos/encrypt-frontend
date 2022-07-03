@@ -1,11 +1,17 @@
+// Core
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+
+// App
+import Routing from './routing/Routing';
+
+// Styles
 import './index.css';
+import 'antd/dist/antd.css';
 
 const app = (
   <React.StrictMode>
-    <App />
+    <Routing />
   </React.StrictMode>
 );
 

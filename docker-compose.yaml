@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  encrypt_frontend:
+    build: .
+    container_name: encrypt-frontend
+    ports:
+      - "80:80"
+    restart: unless-stopped

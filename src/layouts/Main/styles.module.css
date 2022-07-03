@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px !important;
+  background: #000;
+}
+
+.logo {
+  position: relative;
+  left: -5px;
+  margin-top: 4px;
+}
+
+.link {
+  display: inline-block;
+  height: 32px;
+  padding: 4px 15px;
+  color: #fff;
+}
+
+.avatar {
+  background-color: #87d068 !important;
+}
