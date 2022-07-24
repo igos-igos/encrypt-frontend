@@ -4,6 +4,8 @@ services:
   encrypt_frontend:
     build: .
     container_name: encrypt-frontend
+    environment:
+      - NODE_ENV=production
     ports:
       - "80:80"
     restart: unless-stopped
