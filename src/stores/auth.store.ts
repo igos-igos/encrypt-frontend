@@ -1,29 +1,42 @@
 import { makeAutoObservable, runInAction } from 'mobx';
+import { AuthService } from '../api/services/auth.service';
+import { makePersistable } from 'mobx-persist-store';
 
 class AuthStore {
   token: string | null;
 
-  isAuth: boolean;
-
   constructor() {
     this.token = null;
 
-    this.isAuth = false;
-
     makeAutoObservable(this);
+    makePersistable(this, { name: 'auth', properties: ['token'], storage: window.localStorage });
   }
 
-  setToken(token: string) {
-    runInAction(() => {
-      this.token = token;
-    });
-  }
+  register = async (email: string, password: string) => {
+    try {
+      const response = await AuthService.register(email, password);
+      if (response.status === 201) {
+        return true;
+      }
 
-  setIsAuth(isAuth: boolean) {
-    runInAction(() => {
-      this.isAuth = isAuth;
-    });
-  }
+      return false;
+    } catch (error) {
+      throw new Error('Something went wrong');
+    }
+  };
+
+  login = async (email: string, password: string) => {
+    try {
+      const response = await AuthService.login(email, password);
+      if (response.status === 200) {
+        runInAction(() => {
+          this.token = response.data.access_token;
+        });
+      }
+    } catch (error) {
+      throw new Error('Something went wrong');
+    }
+  };
 }
 
 const authStore = new AuthStore();

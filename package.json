@@ -17,7 +17,9 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "antd": "^4.21.3",
+    "axios": "^0.27.2",
     "mobx": "^6.6.1",
+    "mobx-persist-store": "^1.0.6",
     "mobx-react-lite": "^3.4.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
