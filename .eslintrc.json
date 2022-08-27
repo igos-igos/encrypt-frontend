@@ -1,4 +1,10 @@
 {
+  "settings": {
+    "react": {
+      "version": "18.0.0"
+    }
+  },
+
   "env": {
     "browser": true,
     "node": true,
@@ -14,7 +20,7 @@
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaFeatures": {
-      "jsx": true
+      "tsx": true
     },
     "ecmaVersion": 2021,
     "sourceType": "module"
@@ -40,6 +46,7 @@
   "rules": {
     "@typescript-eslint/no-non-null-assertion": "off",
     "react/react-in-jsx-scope": "off",
-    "no-console": "warn"
+    "no-console": "warn",
+    "import/extensions": "off"
   }
 }
